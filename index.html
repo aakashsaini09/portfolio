@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio website</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="shortcut icon" type="image/x-icon" href="logo.jpeg" />
+</head>
+<style>
+	*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	box-sizing: border-box;
+}
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 25px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.logo{
+	color: white;
+	font-size: 35px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+span{
+	color: #f9004d;
+}
+nav ul li
+{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px 15px;
+}
+nav ul li a
+{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+nav ul li a:hover {
+	color: #f9004d;
+	transition: .4s;
+}
+
+.btn {
+	background-color: #f9004d;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 25px;
+	border-radius: 30px;
+	transition: transform .1s;
+}
+
+.btn:hover {
+	transform: scale(1.2);
+}
+
+.content {
+	position: absolute;
+	top: 50%;
+	left: 8%;
+	transform: translateY(-50%);
+}
+
+h1 {
+	color: white;
+	margin: 20px 0px 20px;
+	font-size: 75px;
+}
+
+h3 {
+	color: white;
+	font-size: 25px;
+	margin-bottom: 50px;
+}
+
+h4 {
+	color: #fcfc;
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+
+.newslatter form {
+	width: 380px;
+	max-width: 100%;
+	position: relative;
+}
+
+.newslatter form input:first-child {
+	display: inline-block;
+	width: 100%;
+	padding: 14px 130px 14px 15px;
+	border: 2px solid #f9004d;
+	outline: none;
+	border-radius: 30px;
+}
+
+.newslatter form input:last-child {
+	position: absolute;
+	display: inline-block;
+	outline: none;
+	border: none;
+	padding: 10px 30px;
+	border-radius: 30px;
+	background-color: #f9004d;
+	color: white;
+	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+	top: 6px;
+	right: 6px;
+}
+
+.about {
+	width: 100%;
+	padding: 100px 0px;
+	background-color: #191919;
+}
+
+.about img {
+	height: auto;
+	width: 430px;
+}
+
+.about-text {
+	width: 550px;
+}
+
+.main {
+	width: 1130px;
+	max-width: 95%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.about-text h2 {
+	color: white;
+	font-size: 75px;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+
+.about-text h5 {
+	color: white;
+	letter-spacing: 2px;
+	font-size: 22px;
+	margin-bottom: 25px;
+	text-transform: capitalize;
+}
+
+.about-text p {
+	color: #fcfc;
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-size: 18px;
+	margin-bottom: 45px;
+}
+
+button {
+	background-color: #f9004d;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 13px 30px;
+	border-radius: 30px;
+	transition: .1s;
+	/* transform: scale(1.2);  */
+}
+
+button:hover {
+	transform: scale(1.2);
+}
+
+button:hover {
+	background-color: transparent;
+	border: 2px solid #f9004d;
+	cursor: pointer;
+}
+
+.service {
+	background: #101010;
+	width: 100%;
+	padding: 100px 0px;
+}
+
+.title h2 {
+	color: white;
+	font-size: 75px;
+	width: 1130px;
+	margin: 30px auto;
+	text-align: center;
+}
+
+.box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 400px;
+}
+
+.card {
+	height: 365px;
+	width: 335px;
+	padding: 20px 35px;
+	background: #191919;
+	border-radius: 20px;
+	margin: 15px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+.card i {
+	font-size: 50px;
+	display: block;
+	text-align: center;
+	margin: 25px 0px;
+	color: #f9004d;
+
+}
+
+h5 {
+	color: white;
+	font-size: 23px;
+	margin-bottom: 15px;
+}
+
+.pra p {
+	color: #fcfc;
+	font-size: 16px;
+	line-height: 27px;
+	margin-bottom: 25px;
+}
+
+.card .button {
+	background-color: #f9004d;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 9px 22px;
+	border-radius: 30px;
+	transition: 0.1s;
+}
+
+.card .button:hover {
+	background-color: transparent;
+	border: 2px solid #f9004d;
+	cursor: pointer;
+}
+
+.contact-me {
+	width: 100%;
+	height: 290px;
+	background: #191919;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.contact-me p {
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+.contact-me .button-two {
+	background-color: #f9004d;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 13px 30px;
+	border-radius: 30px;
+	transition: .4s;
+}
+
+.contact-me .button-two:hover {
+	background-color: transparent;
+	border: 2px solid #f9004d;
+	cursor: pointer;
+}
+
+footer {
+	position: relative;
+	width: 100%;
+	height: 400px;
+	background: #101010;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+footer p:nth-child(1) {
+	font-size: 30px;
+	color: white;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+footer p:nth-child(2) {
+	color: white;
+	font-size: 17px;
+	width: 500px;
+	text-align: center;
+	line-height: 26px;
+}
+
+.social
+{
+	display: flex;
+}
+
+.social a
+{
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f9004d;
+	border-radius: 50%;
+	margin: 22px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.social a:hover
+{
+	transform: scale(1.3);
+	transition: .3s;
+}
+
+.end
+{
+	position: absolute;
+	color: #f9004d;
+	bottom: 35px;
+	font-size: 25px;
+}
+.aakash
+{
+	background-position: center;
+	background-image: url('aksh2.jpg');
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+
+/* *****************media quarry selector***************** */
+@media screen and (max-width: 800px) {
+
+	.logo
+	{
+		display: none;
+	}
+
+	ul
+	{
+		display: flex;
+	}
+}
+</style>
+<body>
+	<!----hero Section start---->
+	<!-- li and ul portion -->
+	<div class="hero aakash">
+		<!-- style="background-image: url('/img/aksh2.jpg'); background-position: center; background-size: cover; width: 100%; height: 100vh;" -->
+		<nav>
+			<h2 class="logo">Portfo<span>lio</span></h2>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="tel:9485858534">Call me</a></li>
+				<li><a href="mailto:aakashsaini948585@gmail.com" target="_black">Email</a></li>
+				<li><a href="https://wa.me/919485858534" target="_blank">Whatsapp chat</a></li>
+				<li><a href="about.html " target="_blank">About Me</a></li>
+			</ul>
+			<!-- <button1 id="mode" onclick="myfunction">Change Mode</button1> 
+			How to change mode in html and css webpage. without using css and html. only use javascript-->
+			<a href="https://www.youtube.com/@Sourabh_edits" target="_blank" class="btn">Subscribe</a>
+		</nav>
+		<div class="content">
+			<h4>Hello, my name is</h4>
+			<h1>Aakash <span>Saini</span></h1>
+			<h3>I'm a Web Developer.</h3>
+			<div class="newslatter">
+				<form>
+					<input type="email" name="email" id="mail" placeholder="Enter Your Email">
+					<input type="submit" name="submit" value="Lets Start">
+				</form>
+			</div>
+		</div>
+	</div>
+	<!----About section start---->
+	<section class="about">
+		<div class="main">
+			<img src="secondimg.jpg">
+			<div class="about-text">
+				<h2>About Me</h2>
+				<h5>Developer <span>& Designer</span></h5>
+				<p>I am a full-stack web developer. I can provide clean code and pixel perfect design. I also make the
+					website more & more interactive with web animations.I can provide clean code and pixel perfect
+					design. I also make the website more & more interactive with web animations.A responsive design
+					makes your website accessible to all users, regardless of their device.</p>
+				<a href="https://www.instagram.com/_aakashsaini/" target="_blank"><button type="button">Let's
+						Talk</button></a>
+			</div>
+		</div>
+	</section>
+	<div class="container">
+	</div>
+	<!-----service section start----------->
+	<div class="service">
+		<div class="title">
+			<h2>Our Services</h2>
+		</div>
+
+		<div class="box">
+			<div class="card">
+				<i class="fas fa-bars"></i>
+				<h5>Front-End</h5>
+				<div class="pra">
+					<p>Full stack development refers to the end-to-end application software development, including the
+						front end and back end.</p>
+					<p style="text-align: center;">
+						<a class="button"
+							href="https://frontendmasters.com/guides/front-end-handbook/2018/what-is-a-FD.html"
+							target="_blank">Read More</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<i class="far fa-user"></i>
+				<h5>Back-End</h5>
+				<div class="pra">
+					<p>Back-end development means working on server-side software, which focuses on everything you can't
+						see on a website.</p>
+
+					<p style="text-align: center;">
+						<a class="button" href="https://www.guru99.com/what-is-backend-developer.html"
+							target="_blank">Read More</a>
+					</p>
+				</div>
+			</div>
+			<div class="card">
+				<i class="far fa-bell"></i>
+				<h5>Full-Stack</h5>
+				<div class="pra">
+					<p>Full stack development refers to the end-to-end application software development, including the
+						front end and back end.</p>
+
+					<p style="text-align: center;">
+						<a class="button"
+							href="https://www.mongodb.com/languages/full-stack-development#:~:text=Full%20stack%20development%20refers%20to,business%20logic%20and%20application%20workflows."
+							target="_blank">Read More</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!------Contact Me------>
+	<div class="contact-me">
+		<p>Let Me Get You A Beautiful Website.</p>
+		<a class="button-two" href="https://www.fiverr.com/aakashsaini09?up_rollout=true" target="_blank">Hire Me</a>
+	</div>
+
+	<!------footer start--------->
+	<footer>
+		<p>Aakash saini</p>
+		<p>For more HTML, CSS, and coding tutorial - please click on the link below to subscribe to my channel:</p>
+		<div class="social">
+			<a href="https://www.facebook.com/profile.php?id=100023344250063" target="_blank"><i
+					class="fab fa-facebook-f"></i></a>
+			<a href="https://www.instagram.com/_aakashsaini/" target="_blank"><i class="fab fa-instagram"></i></a>
+			<a href="https://www.youtube.com/@Sourabh_edits" target="_blank"><i class="fab fa-youtube"></i></a>
+		</div>
+		<p class="end">CopyRight &#169; By Aakash saini</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+
+</html>
