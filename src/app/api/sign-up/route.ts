@@ -2,7 +2,6 @@ import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/models/User";
 import bcrypt from 'bcryptjs'
 import { sendVerificationEmail } from "@/helpers/sendVerificationMail";
-
 export async function POST(request: Request) {
     await dbConnect()
         try {
@@ -26,7 +25,11 @@ export async function POST(request: Request) {
 
                     }, {status: 400})
                 }else{
-                    const hashedPassword = await bcrypt.hash(password, 10)
+                    const hashedPassword = await bcrypt.hash(password, 10)  
+                    existingUserByEmail.password = hashedPassword;
+                    existingUserByEmail.verifyCode = verifyCode;
+                    existingUserByEmail.verifyExpiry = new Date(Date.now() + 3600000)
+                    await existingUserByEmail.save();
                 }
             }else{
                 let hashPassword = await bcrypt.hash(password, 10);
@@ -69,7 +72,5 @@ export async function POST(request: Request) {
                 { 
                     status: 500
                 })
-        }
-    
-    
+        }  
 }
