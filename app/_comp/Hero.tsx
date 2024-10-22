@@ -1,7 +1,7 @@
 import Image from "next/image"
 import '../assets/style.css'
 import { FlipWords } from "../components/ui/flip-words"
-import mainlogo from '../assets/download.png'
+import mainlogo from '../assets/ak3.png'
 const Hero = () => {
   const words = ["developer", "designer"]
   return (
@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
 
       <div className="right order-1 md:order-2 overflow-hidden w-[100%] md:w-[40%] h-[70vh] md:h-[90vh] flex justify-center items-center">
-        <Image className="mx-auto relative md:static left-24 " src={mainlogo} alt="Image" width={600} height={600}></Image>
+        <Image className="mx-auto relative md:static left-12 border-2 border-purple-600 rounded-full mt-4 filter grayscale" src={mainlogo} alt="Image" width={500} height={500}></Image>
       </div>
     </div>
   )
