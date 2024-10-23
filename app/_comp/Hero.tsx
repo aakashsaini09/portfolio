@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
 
       <div className="right order-1 md:order-2 overflow-hidden w-[100%] md:w-[40%] h-[70vh] md:h-[90vh] flex justify-center items-center">
-        <Image className="mx-auto relative md:static left-12 border-2 border-purple-600 rounded-full mt-4 filter grayscale" src={mainlogo} alt="Image" width={500} height={500}></Image>
+        <Image className="mx-auto relative md:static border-2 border-purple-600 rounded-full mt-4 filter grayscale" src={mainlogo} alt="Image" width={500} height={500}></Image>
       </div>
     </div>
   )
