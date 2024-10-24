@@ -1,12 +1,4 @@
-// route.ts
-import {NextAuthOptions, AuthOptions} from "next-auth"
-import { CredentialsProvider } from "next-auth/providers/credentials"
-import bcrypt from 'bcryptjs'
-import dbConnect from "@/lib/dbConnect"
-import UserModel from "@/models/User"
-
-export const authOptions: NextAuthOptions = {
-    providers: [
-        
-    ]
-}
+import NextAuth from "next-auth"
+import { authOptions } from "./options"
+const handler = NextAuth(authOptions)
+export {handler as GET, handler as POST}

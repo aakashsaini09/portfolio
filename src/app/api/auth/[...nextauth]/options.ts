@@ -7,7 +7,7 @@ import UserModel from "@/models/User";
 import { promises } from "dns";
 import { pages } from "next/dist/build/templates/app-page";
 
-
+// https://wheel-of-life-mu.vercel.app/
 export const authOptions: NextAuthOptions = {
     providers: [
         CredentialsProvider({
@@ -46,9 +46,21 @@ export const authOptions: NextAuthOptions = {
     ],
     callbacks: {
         async jwt({ user, token}){
+            if(user){
+                token._id = user._id?.toString();
+                token.isVerified = user.isverified;
+                token.isAcceptingMessages = user.isAcceptingMessages;
+                token.username = user.username;
+            }
             return token
         },
-        async session({ session, user}){
+        async session({ session, token}){
+            if(token){
+                session.user._id = token._id
+                session.user.isverified = token.isverified;
+                session.user.isAcceptingMessages = token.isAcceptingMessages;
+                session.user.username = token.username;
+            }
             return session
         },
     },
