@@ -13,6 +13,12 @@ import Robot from "./components/Robot";
 export default function Home() {
   const content= [
     {
+      title: "Silent Shout",
+      description: "Receive anonymous feedback from your friends and family.",
+      link: "https://silent-shout.netlify.app",
+      img: '/silent.png'
+    },
+    {
       title: "QuillVibes",
       description: "Write or generate blogs with AI assistance and publish them.",
       link: "https://quill-vibes.vercel.app/",
@@ -29,12 +35,6 @@ export default function Home() {
       description: "Write code with your friends in real-time. Work on same Project Together.",
       link: "https://github.com/aakashsaini09/CodeCollab",
       img: '/codeing.png'
-    },
-    {
-      title: "Github Profile",
-      description: "Search and View github Profile in a clean and intuitive UI",
-      link: "https://github-profile-aakashsaini09.netlify.app/",
-      img: '/github.png'
     },
     {
       title: "Cryoto Tracker",
