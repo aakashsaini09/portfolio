@@ -1,7 +1,9 @@
 import Photo from "@/components/Photo"
 import Social from "@/components/Social"
+import Stats from "@/components/Stats"
 import { Button } from "@/components/ui/button"
 import { FiDownload } from 'react-icons/fi'
+
 const Home = () => {
   return <section className="h-full">
       <div className="container mx-auto h-full">
@@ -27,6 +29,7 @@ const Home = () => {
             <Photo/>
           </div>
         </div>
+        <Stats/>
       </div>
     </section>
   
