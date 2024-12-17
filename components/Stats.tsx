@@ -52,26 +52,26 @@ const fetchTotalCommits = async () => {
     return 0;
 }
 };
-// useEffect(() => {
-//     fetchTotalCommits()
-// }, [])
+useEffect(() => {
+    fetchTotalCommits()
+}, [])
 
 
 const stats = [
     {
-        num: 12,
+        num: 2,
         text: 'Years of experience'
     },
     {
-        num: 26,
+        num: 12,
         text: 'Projects completed'
     },
     {
-        num: 8,
+        num: 4,
         text: 'Technologies mastered'
     },
     {
-        num: 500,
+        num: commitsCounting,
         text: 'Code commits'
     },
 ]

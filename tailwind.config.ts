@@ -28,8 +28,10 @@ export default {
   			foreground: 'var(--foreground)',
 			primary: '#1c1c22',
 			accent: {
-				DEFAULT: '#00ff99',
-				hover: '#00e187'
+				DEFAULT: '#fce703',
+				// #00ff99
+				// hover: '#00e187'
+				hover: '#fce703'
 			}
   		},
   		borderRadius: {

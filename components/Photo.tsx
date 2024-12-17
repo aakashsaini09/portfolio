@@ -22,7 +22,8 @@ const Photo = () => {
             priority 
             quality={100} 
             fill 
-            alt="Img Not Found" 
+            alt="Img Not Found"
+            draggable={false} 
             className="object-contain rounded-full filter grayscale brightness-50" 
           />
         </motion.div>
@@ -38,7 +39,7 @@ const Photo = () => {
             cx='253' 
             cy='253' 
             r='253' 
-            stroke='#00ff99'
+            stroke='#fce703'
             strokeWidth='4'
             strokeLinecap='round'
             strokeLinejoin='round'
