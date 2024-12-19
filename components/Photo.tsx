@@ -26,11 +26,14 @@ const Photo = () => {
             draggable={false} 
             className="object-contain rounded-full filter grayscale brightness-50" 
           />
+          {/* <div className="absolute bottom-0 left-0 w-14 h-full bg-gradient-to-r from-[#c5c5d4] to-transparent z-0"></div> */}
+          <div className="absolute top-0 right-0 w-50 h-full bg-gradient-to-bl from-[#1c1c22] to-transparent z-0"></div>
+  {/* <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-tl from-[#1c1c22] to-transparent z-0"></div> */}
         </motion.div>
 
         {/* circle */}
         <motion.svg
-          className='w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]'
+          className='w-[300px] xl:w-[500px] h-[300px] xl:h-[500px]'
           fill='transparent'
           viewBox='0 0 506 506'
           xmlns='http://www.w3.org/2000/svg'
