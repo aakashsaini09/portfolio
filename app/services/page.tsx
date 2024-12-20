@@ -31,7 +31,7 @@ const service = [
   },
 ]
 const services = () => {
-  return <section className='py-12 xl:py-0 min-h-[80vh] flex flex-col justify-center'>
+  return <section className='py-12 xl:py-10 min-h-[80vh] flex flex-col justify-center'>
     <div className="container mx-auto">
       <motion.div
         initial={{opacity: 0}}
