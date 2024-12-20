@@ -64,10 +64,53 @@ const work = () => {
         <div className="flex flex-col xl:flex-row xl:gap-[30px] ">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div>
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
+              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+                {project.num}
+              </div>
+              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+                {project.category} project
+              </h2>
+              <p className="text-white/60">{project.des}</p>
+              <ul className="flex gap-4">
+                {project.stack.map((item, index) => {
+                  return <li className="text-xl text-accent" key={index}>
+                    {item.name}
+                    {index !== project.stack.length - 1 && ','}
+                  </li>
+                })}
+              </ul>
+              <div className="border border-white/20"></div>
+              <div>
+                <Link href={project.live}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Live Project</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+
+
+                <Link href={project.github}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Github repository</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="w-full">slider</div>
+          <div className="w-full xl:w-[50%]">slider</div>
         </div>
       </div>
     </motion.section>
