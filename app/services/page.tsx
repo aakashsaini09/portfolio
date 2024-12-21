@@ -7,25 +7,25 @@ import {motion} from 'framer-motion'
 const service = [
   {
     num: '01',
-    title: 'Web Development',
+    title: 'Frontend Web',
     des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, animi! Illum obcaecati nemo, odio .',
     href: ''
   },
   {
     num: '02',
-    title: 'UI/UX Design',
+    title: 'Backend Web',
     des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, animi! Illum obcaecati nemo, odio .',
     href: ''
   },
   {
     num: '03',
-    title: 'DEVOPS Eng',
+    title: 'Full Stack',
     des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, animi! Illum obcaecati nemo, odio .',
     href: ''
   },
   {
     num: '04',
-    title: 'Full Stack Developer',
+    title: 'DevOps',
     des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, animi! Illum obcaecati nemo, odio .',
     href: ''
   },

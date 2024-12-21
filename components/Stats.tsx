@@ -71,7 +71,7 @@ const stats = [
         text: 'Technologies mastered'
     },
     {
-        num: commitsCounting,
+        num: commitsCounting ? commitsCounting : 0,
         text: 'Code commits'
     },
 ]
