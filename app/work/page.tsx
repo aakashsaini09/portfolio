@@ -18,39 +18,51 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: '01', 
-    category: 'frontend',
-    title: 'Chat-App',
-    des: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi quibusdam aspernatur, officiis aliquam qui aut!',
+    category: 'fullstack',
+    title: 'Silent-Shout',
+    des: 'Share your unique URL to collect anonymous feedback effortlessly. Features include login/signup, message controls, and a feedback dashboard.',
     stack: [
-      {name: 'Next-js'}, { name: 'Css 3'}, { name: 'Javascript'}
+      {name: 'React-Vite'}, { name: 'Prisma'}, { name: 'Tailwind-CSS'}
     ],
-    image: '/files/grnd.png',
-    live: '', 
-    github: ''
+    image: '/soon.webp',
+    live: 'https://silent-shout.netlify.app/', 
+    github: 'https://github.com/aakashsaini09/Silent-Shout'
   },
   {
     num: '02', 
-    category: 'frontend',
-    title: 'Chat-App',
-    des: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi quibusdam aspernatur, officiis aliquam qui aut!',
+    category: 'fullstack',
+    title: 'QuillVibes',
+    des: 'Users can write and publish their own blogs or generate content with AI assistance. The scalable, open- source web application includes multiple features.',
     stack: [
-      {name: 'Prisma'}, { name: 'Css 3'}, { name: 'Javascript'}
+      {name: 'React-JS'}, { name: 'TypeScript'}, { name: 'Tailwind-CSS'}, { name: 'AWS'}
     ],
-    image: '/files/img.jpg',
-    live: '', 
-    github: ''
+    image: '/soon.webp',
+    live: 'https://quill-vibes.vercel.app/', 
+    github: 'https://github.com/aakashsaini09/QuillVibes'
   },
   {
     num: '03', 
-    category: 'frontend',
-    title: 'Chat-App',
-    des: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi quibusdam aspernatur, officiis aliquam qui aut!',
+    category: 'fullstack',
+    title: 'ChatNest',
+    des: 'Connect and chat in real-time with this user-friendly web application. Features include login/signup, editable profiles with photos, online status updates via WebSockets, and seamless user search functionality.',
     stack: [
-      {name: 'Html 5'}, { name: 'Css 3'}, { name: 'Javascript'}
+      {name: 'React-Vite'}, { name: 'Web-Sockets'}, { name: 'Mongo-DB'}
     ],
-    image: '/about.png',
-    live: '', 
-    github: ''
+    image: '/soon.webp',
+    live: 'https://github.com/aakashsaini09/ChatNest', 
+    github: 'https://github.com/aakashsaini09/ChatNest'
+  },
+  {
+    num: '04', 
+    category: 'frontend',
+    title: 'CodeCollab',
+    des: 'Create or join coding rooms to collaborate in real-time. Features include live editing, user lists, and join/leave notifications.',
+    stack: [
+      {name: 'WebSockets'}, { name: 'React-JS'}, { name: 'Tailwind-CSS'}
+    ],
+    image: '/soon.webp',
+    live: 'https://coding-bros.netlify.app/', 
+    github: 'https://github.com/aakashsaini09/CodeCollab'
   },
 ]
 
@@ -78,7 +90,7 @@ const work = () => {
                 {project.num}
               </div>
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+                {project.title}
               </h2>
               <p className="text-white/60">{project.des}</p>
               <ul className="flex gap-4">
@@ -93,7 +105,7 @@ const work = () => {
 
 
               <div className="flex items-center gap-4">
-                <Link href={project.live}>
+                <Link target="_blank" href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -107,7 +119,7 @@ const work = () => {
                 </Link>
 
 
-                <Link href={project.github}>
+                <Link target="_blank" href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">

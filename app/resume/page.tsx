@@ -61,25 +61,25 @@ const experience = {
   des: 'A snapshot of my professional journey, highlighting impactful projects, hands-on expertise, and growth as a developer.',
   items: [
     {
+      company: 'AFAME TECHNOLOGIES', 
+      position: 'Full-stack Dev internship',
+      duration: 'April 2024 - June 2024'
+    },
+    {
       company: 'Final Year Project', 
-      position: 'Project Lead',
-      duration: 'Jan 2024 - June 2024'
-    },
-    {
-      company: 'Second One', 
-      position: 'Back-end Stack dev',
+      position: 'Project team Lead (3 students)',
       duration: '2022 - 2023'
     },
-    {
-      company: 'Third One', 
-      position: 'Full-Stack dev',
-      duration: '2022 - 2023'
-    },
-    {
-      company: 'Third One', 
-      position: 'Full-Stack dev',
-      duration: '2022 - 2023'
-    }
+    // {
+    //   company: 'XYZ Tech Limited', 
+    //   position: 'Full-Stack dev',
+    //   duration: '2022 - 2023'
+    // },
+    // {
+    //   company: 'ABC', 
+    //   position: 'Full-Stack dev',
+    //   duration: '2022 - 2023'
+    // }
   ]
 }
 
@@ -91,13 +91,13 @@ const education = {
   des: `A glimpse into my education journey, showcasing my academic achievements and passion for continuous learning in tech.`,
   items: [
     {
-      institution: '100xDEV Online Cource', 
+      institution: '100xDev Online Course', 
       position: 'Fullstack & DevOps',
       duration: '2024 - Present'
     },
     {
-      institution: 'PG, Collage Jind, Haryana', 
-      position: 'Computer Science Student',
+      institution: 'GC Govt, Collage Jind', 
+      position: 'Computer Science Student (BCA)',
       duration: '2021 - 2024'
     },
     {

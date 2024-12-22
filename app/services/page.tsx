@@ -8,25 +8,25 @@ const service = [
   {
     num: '01',
     title: 'Frontend Web',
-    des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, animi! Illum obcaecati nemo, odio .',
+    des: 'Crafting stunning, responsive user interfaces with React, Tailwind CSS, and modern JavaScript/TypeScript frameworks for seamless experiences.',
     href: ''
   },
   {
     num: '02',
     title: 'Backend Web',
-    des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, animi! Illum obcaecati nemo, odio .',
+    des: 'Building robust, scalable APIs and server-side logic using Node.js, Next.js, Prisma, MongoDB and Web-Socket to power applications.',
     href: ''
   },
   {
     num: '03',
     title: 'Full Stack',
-    des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, animi! Illum obcaecati nemo, odio .',
+    des: 'Delivering complete web solutions, seamlessly integrating frontend and backend technologies for dynamic, user-friendly applications.',
     href: ''
   },
   {
     num: '04',
     title: 'DevOps',
-    des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, animi! Illum obcaecati nemo, odio .',
+    des: 'Streamlining deployments, CI/CD pipelines, and cloud infrastructure management to ensure reliable, efficient, and secure software delivery.',
     href: ''
   },
 ]
