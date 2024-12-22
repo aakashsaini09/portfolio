@@ -8,7 +8,12 @@ const socials = [
     {icon: <FaDiscord/>, path: 'https://discordapp.com/users/1243529310351130704'},
     {icon: <FaSquareXTwitter/>, path: 'https://x.com/__aakashsaini'},
 ]
-const Social = ({containerStyles, iconStyles}: any) => {
+interface SocialProps {
+  containerStyles: string;
+  iconStyles: string;
+}
+
+const Social = ({containerStyles, iconStyles}: SocialProps) => {
   return (
     <div className={containerStyles}>
       {socials.map((item, index) => {

@@ -12,32 +12,26 @@ const Stats = () => {
     const [commitsCounting, setcommitsCounting] = useState(0)
     
     const BASE_URL = "https://api.github.com";
-let username = 'aakashsaini09'
+const username = 'aakashsaini09'
 const fetchTotalCommits = async () => {
   setloading(true)
   try {
-      // Step 1: Fetch all repositories
     const reposResponse = await axios.get(`${BASE_URL}/users/${username}/repos`);
-    console.log("first res: ", reposResponse)
     const repos = reposResponse.data;
-
     let totalCommits = 0;
-
-    // Step 2: Fetch commit count for each repository
     for (const repo of repos) {
         const commitsResponse = await axios.get(
             `${BASE_URL}/repos/${username}/${repo.name}/commits`,
             {
-                params: { per_page: 1 }, // Fetch only one commit per page
+                params: { per_page: 1 },
             }
         );
-        
         // Extract total pages from the 'Link' header
         const linkHeader = commitsResponse.headers.link;
         if (linkHeader) {
             const lastPageMatch = linkHeader.match(/&page=(\d+)>; rel="last"/);
             if (lastPageMatch) {
-                totalCommits += parseInt(lastPageMatch[1], 10); // Add the last page number to total commits
+                totalCommits += parseInt(lastPageMatch[1], 10);
             } else {
                 totalCommits += 1; 
             }
@@ -54,7 +48,7 @@ const fetchTotalCommits = async () => {
 };
 useEffect(() => {
     fetchTotalCommits()
-}, [])
+}, [fetchTotalCommits])
 
 
 const stats = [
@@ -104,5 +98,4 @@ if(loading){
       )
 }
 }
-// /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
 export default Stats
