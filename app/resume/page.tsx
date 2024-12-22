@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { FaAws, FaRust, FaNodeJs } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiPrisma, SiTypescript, SiMongodb } from "react-icons/si";
@@ -170,13 +169,9 @@ const resume = () => {
         <div className="container mx-auto">
           <Tabs defaultValue="education" className="flex flex-col xl:flex-row gap-[60px]">
             <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-              {/* @ts-ignore */}
               <TabsTrigger value="education">Education</TabsTrigger>
-              {/* @ts-ignore */}
               <TabsTrigger value="skills">Skills</TabsTrigger>
-              {/* @ts-ignore */}
               <TabsTrigger value="experience">Experience</TabsTrigger>
-              {/* @ts-ignore */}
               <TabsTrigger value="about">About me</TabsTrigger>
             </TabsList>
             <div className="min-h-[70vh] w-full">
