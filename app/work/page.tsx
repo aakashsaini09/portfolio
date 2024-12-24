@@ -24,7 +24,7 @@ const projects = [
     stack: [
       {name: 'React-Vite'}, { name: 'Prisma'}, { name: 'Tailwind-CSS'}
     ],
-    image: '/soon.webp',
+    image: '/work/silentshout.png',
     live: 'https://silent-shout.netlify.app/', 
     github: 'https://github.com/aakashsaini09/Silent-Shout'
   },
@@ -34,9 +34,9 @@ const projects = [
     title: 'QuillVibes',
     des: 'Users can write and publish their own blogs or generate content with AI assistance. The scalable, open- source web application includes multiple features.',
     stack: [
-      {name: 'React-JS'}, { name: 'TypeScript'}, { name: 'Tailwind-CSS'}, { name: 'AWS'}
+      {name: 'React-JS'}, { name: 'Tailwind-CSS'}, { name: 'AWS'}
     ],
-    image: '/soon.webp',
+    image: '/work/quill.png',
     live: 'https://quill-vibes.vercel.app/', 
     github: 'https://github.com/aakashsaini09/QuillVibes'
   },
@@ -48,7 +48,7 @@ const projects = [
     stack: [
       {name: 'React-Vite'}, { name: 'Web-Sockets'}, { name: 'Mongo-DB'}
     ],
-    image: '/soon.webp',
+    image: '/work/chatnestimg.png',
     live: 'https://github.com/aakashsaini09/ChatNest', 
     github: 'https://github.com/aakashsaini09/ChatNest'
   },
@@ -60,7 +60,7 @@ const projects = [
     stack: [
       {name: 'WebSockets'}, { name: 'React-JS'}, { name: 'Tailwind-CSS'}
     ],
-    image: '/soon.webp',
+    image: '/work/codecollab.png',
     live: 'https://coding-bros.netlify.app/', 
     github: 'https://github.com/aakashsaini09/CodeCollab'
   },
