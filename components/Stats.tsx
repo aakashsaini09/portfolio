@@ -14,38 +14,40 @@ const Stats = () => {
     const BASE_URL = "https://api.github.com";
 const username = 'aakashsaini09'
 const fetchTotalCommits = async () => {
-  setloading(true)
-  try {
-    const reposResponse = await axios.get(`${BASE_URL}/users/${username}/repos`);
-    const repos = reposResponse.data;
-    let totalCommits = 0;
-    for (const repo of repos) {
-        const commitsResponse = await axios.get(
+    setloading(true);
+  
+    try {
+      const reposResponse = await axios.get(`${BASE_URL}/users/${username}/repos`);
+      const repos = reposResponse.data;
+      const commitCountPromises = repos.map(async (repo: { name: string }) => {
+        try {
+          const commitsResponse = await axios.get(
             `${BASE_URL}/repos/${username}/${repo.name}/commits`,
-            {
-                params: { per_page: 1 },
-            }
-        );
-        // Extract total pages from the 'Link' header
-        const linkHeader = commitsResponse.headers.link;
-        if (linkHeader) {
+            { params: { per_page: 1 } }
+          );
+  
+          const linkHeader = commitsResponse.headers.link;
+          if (linkHeader) {
             const lastPageMatch = linkHeader.match(/&page=(\d+)>; rel="last"/);
-            if (lastPageMatch) {
-                totalCommits += parseInt(lastPageMatch[1], 10);
-            } else {
-                totalCommits += 1; 
-            }
+            return lastPageMatch ? parseInt(lastPageMatch[1], 10) : 1;
+          }
+          return 1;
+        } catch (error) {
+          console.error(`Error fetching commits for repo ${repo.name}:`, error);
+          return 0; 
         }
+      });
+      const commitCounts = await Promise.all(commitCountPromises);
+      const totalCommits = commitCounts.reduce((sum, count) => sum + count, 0);
+      setloading(false);
+      setcommitsCounting(totalCommits);
+      return totalCommits;
+    } catch (error) {
+      setloading(false);
+      console.error("Error fetching repositories:", error);
+      return 0;
     }
-    setloading(false)
-    setcommitsCounting(totalCommits)
-    return totalCommits;
-} catch (error) {
-    setloading(false)
-    console.error("Error fetching commit data:", error);
-    return 0;
-}
-};
+  };
 useEffect(() => {
     fetchTotalCommits()
 }, [fetchTotalCommits])
