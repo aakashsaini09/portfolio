@@ -37,7 +37,7 @@ const info = [
 
 
 const contact = () => {
-  const [result, setResult] = useState("Form Submitted Successfully");
+  const [result, setResult] = useState("");
   const [loading, setloading] = useState(false)
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
