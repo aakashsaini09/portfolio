@@ -14,7 +14,7 @@ const Home = () => {
             <p className="max-w-[500px] mb-9 text-white/80">Full Stack Developer with a flair for DevOps, diving deep into the Web3 frontier to shape the future of the web.</p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button className="uppercase gap-2 flex items-center" variant='outline' size='lg'>
-                <a href="https://drive.google.com/file/d/1VFMscGSPOi5B6ofCq1BUWmMNrKO6IHVg/view?usp=sharing" target="_blank">Download CV</a>
+                <a href="https://drive.google.com/file/d/1tcu7PTb-uW7u8-pfg5hCnByFAIMrDNPg/view?usp=sharing" target="_blank">Download CV</a>
                 <FiDownload className="text-xl"/>
               </Button>
               <div className="mb-8 xl:mb-0">
