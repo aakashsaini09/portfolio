@@ -1,5 +1,5 @@
 "use client";
-import { FaAws, FaRust, FaNodeJs } from "react-icons/fa";
+import { FaAws, FaNodeJs, FaDocker } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiPrisma, SiTypescript, SiMongodb } from "react-icons/si";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -147,8 +147,8 @@ const skills = {
       name: 'prisma'
     },
     {
-      icon: <FaRust/>,
-      name: 'rust'
+      icon: <FaDocker/>,
+      name: 'docker'
     },
 
   ]
