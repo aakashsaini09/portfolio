@@ -55,11 +55,11 @@ useEffect(() => {
 
 const stats = [
     {
-        num: 2,
+        num: 1,
         text: 'Years of experience'
     },
     {
-        num: 12,
+        num: 5,
         text: 'Projects completed'
     },
     {
