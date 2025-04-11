@@ -15,7 +15,6 @@ import {
 import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { motion } from "framer-motion";
 import { useState } from "react";
-
 const info = [
   {
     icon: <FaPhoneAlt/>,
@@ -33,12 +32,14 @@ const info = [
     des: 'Jind, Haryana, India',
   },
 ]
-
-
-
 const contact = () => {
   const [result, setResult] = useState("");
-  const [loading, setloading] = useState(false)
+  const [data, setdata] = useState({
+    name: '',
+    email:'',
+    message: ''
+  })
+  const isDisabled = data.name.length < 3 || data.email.length < 3 || data.message.length < 3;
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
@@ -85,13 +86,6 @@ const contact = () => {
                   </div>
                     ): (<></>)
                   }
-            {/* <div id="static-modal" data-modal-backdrop="static" tabIndex={-1} aria-hidden="true" 
-            className="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-full bg-black bg-opacity-50 backdrop-blur-sm">
-              <div className="bg-transparent p-4 rounded-lg text-white text-3xl font-mono">
-                Loading....
-              </div>
-            </div> */}
-            
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl" onSubmit={onSubmit}>
@@ -99,10 +93,10 @@ const contact = () => {
 {/*            <p className="text-white/60">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem nulla voluptatibus eligendi est tempora vero omnis ex, consequuntur inventore aut.</p> */}
                <p className="text-white/60">Whether you're looking for a developer, have an idea you'd like to build, or just want to talk tech — feel free to reach out. I'm just a message away.</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input name="firstname" type="firstname" placeholder="Firstname" />
+                <Input name="firstname" type="firstname" placeholder="Firstname" onChange={(e) => setdata(pre => ({...pre, name: e.target.value}))} />
                 <Input name="lastname" type="lastname" placeholder="Lastname" />
-                <Input name="email" type="email" placeholder="Email address" />
-                <Input name="phone" type="phone" placeholder="Phone number" />
+                <Input name="email" type="email" placeholder="Email address" onChange={(e) => setdata(pre => ({...pre, email: e.target.value}))} />
+                <Input name="phone" type="phone" placeholder="Phone number (optional)" />
               </div>
               <Select>
                 <SelectTrigger className="w-full">
@@ -121,8 +115,9 @@ const contact = () => {
                 name="message"
                 className="h-[200px]" 
                 placeholder="Type your message here."
+                onChange={(e) => setdata(pre => ({...pre, message: e.target.value}))}
               />
-              <Button size='md' className="max-w-40" type="submit">Send message</Button>
+              <Button size='md' className={`max-w-40 ${isDisabled ? 'cursor-not-allowed' : 'bg-accent'}`} type="submit" disabled={isDisabled} >Send message</Button>
             </form>
           </div>
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">

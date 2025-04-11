@@ -19,6 +19,18 @@ const projects = [
   {
     num: '01', 
     category: 'fullstack',
+    title: 'Github-Roast',
+    des: 'GitHub Profile Battleground. A platform where GitHub profiles are compared by AI, showcasing the coding champs and humorously trolling the underdogs.',
+    stack: [
+      {name: 'Next-JS'}, { name: 'Shadcn-UI'}, { name: 'Tailwind-CSS'}
+    ],
+    image: '/work/github-roast.png',
+    live: 'https://github-war.netlify.app/', 
+    github: 'https://github.com/aakashsaini09/github-roast'
+  },
+  {
+    num: '02', 
+    category: 'fullstack',
     title: 'Silent-Shout',
     des: 'Share your unique URL to collect anonymous feedback effortlessly. Features include login/signup, message controls, and a feedback dashboard.',
     stack: [
@@ -29,7 +41,7 @@ const projects = [
     github: 'https://github.com/aakashsaini09/Silent-Shout'
   },
   {
-    num: '02', 
+    num: '03', 
     category: 'fullstack',
     title: 'QuillVibes',
     des: 'Users can write and publish their own blogs or generate content with AI assistance. The scalable, open- source web application includes multiple features.',
@@ -41,7 +53,7 @@ const projects = [
     github: 'https://github.com/aakashsaini09/QuillVibes'
   },
   {
-    num: '03', 
+    num: '04', 
     category: 'fullstack',
     title: 'ChatNest',
     des: 'Connect and chat in real-time with this user-friendly web application. Features include login/signup, editable profiles with photos, online status updates via WebSockets, and seamless user search functionality.',
@@ -53,7 +65,7 @@ const projects = [
     github: 'https://github.com/aakashsaini09/ChatNest'
   },
   {
-    num: '04', 
+    num: '05', 
     category: 'frontend',
     title: 'CodeCollab',
     des: 'Create or join coding rooms to collaborate in real-time. Features include live editing, user lists, and join/leave notifications.',
