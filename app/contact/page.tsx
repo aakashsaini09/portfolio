@@ -99,7 +99,6 @@ const contact = () => {
 {/*            <p className="text-white/60">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem nulla voluptatibus eligendi est tempora vero omnis ex, consequuntur inventore aut.</p> */}
                <p className="text-white/60">Whether you're looking for a developer, have an idea you'd like to build, or just want to talk tech — feel free to reach out. I'm just a message away.</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input name="firstname" type="firstname" placeholder="Firstname" />
                 <Input name="lastname" type="lastname" placeholder="Lastname" />
                 <Input name="email" type="email" placeholder="Email address" />
